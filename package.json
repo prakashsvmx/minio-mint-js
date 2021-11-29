@@ -18,7 +18,7 @@
     "json-stream": "*",
     "lodash": "*",
     "mime-types": "*",
-    "minio": "git+https://github.com/prakashsvmx/minio-js.git#min-test-fix-1",
+    "minio": "git+https://github.com/harshavardhana/minio-js.git#cleanup-js",
     "mkdirp": "*",
     "moment": "*",
     "source-map-support": "*",

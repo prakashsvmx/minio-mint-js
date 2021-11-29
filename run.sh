@@ -28,4 +28,5 @@ error_log_file="$2"
 
 #./create-data-files.sh
 # run tests
-npm install && export MINT_DATA_DIR=./data && export SERVER_ENDPOINT=http://localhost:9000 && ./node_modules/mocha/bin/mocha -R minioreporter -b --exit 1>>"$output_log_file" 2>"$error_log_file"
+#cd ../ && npm install &&
+export MINT_DATA_DIR=./data && export SERVER_ENDPOINT=http://localhost:9000 && ./node_modules/mocha/bin/mocha -R minioreporter -b --exit 1>>"$output_log_file" 2>"$error_log_file"

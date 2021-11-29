@@ -17,3 +17,15 @@ export ENABLE_HTTPS=1
 export SERVER_REGION=us-east-1
 ./run.sh /tmp/output.log /tmp/error.log
 ```
+
+
+Running locally:
+
+Modify the package.json to include the correct version/branch
+e.g : "minio": "git+https://github.com/harshavardhana/minio-js.git#cleanup-js",
+
+replace the functional test in test/ folder with the content from version/branch and modify the functional tests to point to the server
+
+SERVER_ENDPOINT="localhost:9000" ./node_modules/mocha/bin/mocha -R minioreporter
+
+Verify that there are no failed tests.
