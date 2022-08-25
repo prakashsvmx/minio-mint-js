@@ -24,8 +24,19 @@ Running locally:
 Modify the package.json to include the correct version/branch
 e.g : "minio": "git+https://github.com/harshavardhana/minio-js.git#cleanup-js",
 
+#git+https://github.com/prakashsvmx/minio-js.git#fix-test-mint-s3-gw
+
 replace the functional test in test/ folder with the content from version/branch and modify the functional tests to point to the server
 
 SERVER_ENDPOINT="localhost:9000" ./node_modules/mocha/bin/mocha -R minioreporter
 
 Verify that there are no failed tests.
+
+MINIO_ROOT_USER=minio MINIO_ROOT_PASSWORD=minio123 ./minio gateway nas /tmp/nas --address ":22000" --console-address ":22001"
+
+//Run s3 gateway
+
+//MINIO_ROOT_USER=<AWS_KEY> MINIO_ROOT_PASSWORD=<AWS_SECRET> minio gateway s3 --address ":22000" --console-address ":22001"
+
+Run Tests:
+//ACCESS_KEY=<AWS_KEY> SECRET_KEY=<AWS_SECRET> SERVER_ENDPOINT="localhost:22000" ./node_modules/mocha/bin/mocha -R minioreporter

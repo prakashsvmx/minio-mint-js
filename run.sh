@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 #
 #  Minio Cloud Storage, (C) 2017 Minio, Inc.
 #
@@ -18,15 +18,5 @@
 # ./run.sh info.log err.log
 
 # handle command line arguments
-if [ $# -ne 2 ]; then
-    echo "usage: run.sh <OUTPUT-LOG-FILE> <ERROR-LOG-FILE>"
-    exit 1
-fi
 
-output_log_file="$1"
-error_log_file="$2"
-
-#./create-data-files.sh
-# run tests
-#cd ../ && npm install &&
-export MINT_DATA_DIR=./data && export SERVER_ENDPOINT=http://localhost:9000 && ./node_modules/mocha/bin/mocha -R minioreporter -b --exit 1>>"$output_log_file" 2>"$error_log_file"
+./create-data-files.sh  && npm install && MINT_DATA_DIR=./data SERVER_ENDPOINT="localhost:22000" ACCESS_KEY=minio export SECRET_KEY=minio123  ./node_modules/mocha/bin/mocha -R minioreporter -b --exit 1>>"$output_log_file" 2>"$error_log_file"

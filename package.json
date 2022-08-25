@@ -10,6 +10,13 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "browser-or-node": "*",
+    "buffer-crc32": "*",
+    "crypto-browserify": "*",
+    "fast-xml-parser": "*",
+    "ipaddr.js": "*",
+    "query-string": "*",
+    "web-encoding": "*",
     "app-module-path": "*",
     "async": "*",
     "block-stream2": "*",
@@ -18,7 +25,7 @@
     "json-stream": "*",
     "lodash": "*",
     "mime-types": "*",
-    "minio": "git+https://github.com/harshavardhana/minio-js.git#cleanup-js",
+    "minio": "^7.0.30",
     "mkdirp": "*",
     "moment": "*",
     "source-map-support": "*",
@@ -42,6 +49,7 @@
     "mocha-steps": "*",
     "nock": "*",
     "rewire": "*",
+    "split-file": "*",
     "superagent": "*"
   }
 }
