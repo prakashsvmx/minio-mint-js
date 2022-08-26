@@ -25,7 +25,7 @@
     "json-stream": "*",
     "lodash": "*",
     "mime-types": "*",
-    "minio": "^7.0.30",
+    "minio": "https://github.com/prakashsvmx/minio-js#fix-mint-test-ret",
     "mkdirp": "*",
     "moment": "*",
     "source-map-support": "*",
