@@ -3,3 +3,4 @@ logs/*
 *.log
 test/*
 node_modules
+.idea/

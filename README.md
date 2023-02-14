@@ -20,6 +20,11 @@ export SERVER_REGION=us-east-1
 
 
 Running locally:
+Run server locally in erasure coded setup..
+MINIO_ROOT_USER=minio MINIO_ROOT_PASSWORD=minio123 minio server /tmp/data{1..4} --address ":22000" --console-address ":9001"
+
+
+Branch/Fix Testing:
 
 Modify the package.json to include the correct version/branch
 e.g : "minio": "git+https://github.com/harshavardhana/minio-js.git#cleanup-js",
@@ -40,3 +45,10 @@ MINIO_ROOT_USER=minio MINIO_ROOT_PASSWORD=minio123 ./minio gateway nas /tmp/nas 
 
 Run Tests:
 //ACCESS_KEY=<AWS_KEY> SECRET_KEY=<AWS_SECRET> SERVER_ENDPOINT="localhost:22000" ./node_modules/mocha/bin/mocha -R minioreporter
+
+
+For latest release version specific testing:
+
+./install.sh
+then
+./run.sh
