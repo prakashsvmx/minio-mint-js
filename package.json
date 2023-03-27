@@ -23,7 +23,7 @@
     "json-stream": "*",
     "lodash": "*",
     "mime-types": "*",
-    "minio": "^7.0.32",
+    "minio": "^7.0.33",
     "mkdirp": "*",
     "moment": "*",
     "query-string": "*",

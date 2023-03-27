@@ -47,6 +47,8 @@ Run Tests:
 //ACCESS_KEY=<AWS_KEY> SECRET_KEY=<AWS_SECRET> SERVER_ENDPOINT="localhost:22000" ./node_modules/mocha/bin/mocha -R minioreporter
 
 
+ACCESS_KEY=minio SECRET_KEY=minio123 SERVER_ENDPOINT="localhost:22000" ./node_modules/mocha/bin/mocha -R minioreporter
+
 For latest release version specific testing:
 
 ./install.sh
