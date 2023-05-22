@@ -1,5 +1,5 @@
 module.exports = {
-  spec: 'tests/**/*.js',
+  spec: 'test/**/*.js',
   exit: true,
   reporter: 'spec',
   ui: 'bdd',
