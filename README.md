@@ -49,6 +49,11 @@ Run Tests:
 
 ACCESS_KEY=minio SECRET_KEY=minio123 SERVER_ENDPOINT="localhost:22000" ./node_modules/mocha/bin/mocha -R minioreporter
 
+# !!! Use this locally for testing
+
+MINT_DATA_DIR=./data ACCESS_KEY=minio SECRET_KEY=minio123 SERVER_ENDPOINT="localhost:22000" ./node_modules/mocha/bin/mocha -R minioreporter
+
+
 For latest release version specific testing:
 
 ./install.sh
