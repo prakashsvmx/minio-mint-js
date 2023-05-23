@@ -3,4 +3,5 @@ logs/*
 *.log
 test/*
 node_modules
-.idea/
+.idea/*
+minio-js/

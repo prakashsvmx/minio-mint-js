@@ -1,5 +1,15 @@
-#TODO update as per release
 
-wget "https://raw.githubusercontent.com/minio/minio-js/a8c333ffb0d2e2fdc399512de3f21ae037f4982e/tests/functional/functional-tests.js" -O "test/functional-tests.js"
-npm link minio
+install_path="./minio-js/"
+rm -rf $install_path
 
+git clone https://github.com/minio/minio-js.git $install_path
+
+cd "./minio-js" || exit 0
+
+pwd
+
+LATEST="master" #$(git tag | tail -1)
+
+git checkout "${LATEST}" --force
+
+npm i

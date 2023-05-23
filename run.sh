@@ -19,10 +19,13 @@
 
 # handle command line arguments
 
-#./create-data-files.sh
+./create-data-files.sh
  #npm install
- export MINT_DATA_DIR=./data
+ rm -f "./logs.log" ||true
+ rm -f "./errors.log"||true
+
+ export MINT_DATA_DIR="$PWD/data"
  export SERVER_ENDPOINT="localhost:22000"
  export ACCESS_KEY=minio
  export SECRET_KEY=minio123
- mocha test/ -R minioreporter -R minioreporter -b --exit 1>>"./logs.log" 2>"./errors.log"
+ mocha "./minio-js/tests/functional" -R minioreporter -b --exit 1>>"./logs.log" 2>"./errors.log"
